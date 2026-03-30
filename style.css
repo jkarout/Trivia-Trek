@@ -130,7 +130,9 @@ button:active {
     cursor: not-allowed;
     opacity: 1; 
 
+}
 /* Style the correct answer with a green border */
+
 .answer-btn.correct {
     background-color: white !important; 
     box-shadow: none !important;
