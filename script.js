@@ -45,7 +45,7 @@ function displayGameScreen() {
     const currentQuestion = questions[currentIndex];
     const allAnswers = [...currentQuestion.incorrect_answers, currentQuestion.correct_answer];
 
-    shuffleArray(allAnswers); // shuffle so correct question is not in the last button
+    shuffleArray(allAnswers); // shuffle so correct answer is not in the last button
 
     // Show options for quesion
     gameScreen.innerHTML = `

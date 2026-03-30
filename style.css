@@ -121,11 +121,12 @@ button:active {
 .answer-btn:hover {
     background-color: #4752c4;
 }
+
  /* When clicked, js disables all buttons. Make them white with no shadow */
 .answer-btn:disabled {
     background-color: white;
     box-shadow: none;
-    color: #333; /* Switch text to dark grey so it's readable on the white background */
+    color: #333;
     border-color: #ebedef; 
     cursor: not-allowed;
     opacity: 1; 
@@ -190,6 +191,7 @@ button:active {
     transform: none;
 }
 
+/* Check mark for correct answer */
 .answer-btn.correct::before {
     content: '';
     position: absolute;
@@ -203,6 +205,7 @@ button:active {
     background-repeat: no-repeat;
 }
 
+/* X mark for wrong answer  */
 .answer-btn.wrong::before {
     content: '';
     position: absolute;
@@ -216,11 +219,13 @@ button:active {
     background-repeat: no-repeat;
 }
 
+/* Prevent choice text from overlapping with check mark */
 .answer-btn.correct {
     padding-left: 50px;
     padding-right: 50px;
 }
 
+/* Prevent choice text from overlapping with X mark */
 .answer-btn.wrong {
     padding-left: 50px;
     padding-right: 50px;
