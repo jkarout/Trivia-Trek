@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #5865F2; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.main-container {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 10px;
+    color: #23272a;
+}
+
+
+.subtitle {
+    font-weight: bold;
+    margin: 20px auto;
+}
+
+.description {
+    color: #4f5660;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #4f5660;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+select {
+    width: 100%;
+    height: 52px;
+    text-indent: 15px;
+    border-radius: 8px;
+    border: 2px solid #ebedef;
+    background-color: #f2f3f5;
+    font-size: 1rem;
+    color: #23272a;
+    outline: none;
+    transition: border-color 0.2s;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #5865F2;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 10px;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.primary-btn, #replay-btn {
+    background-color: #3ba55c; 
+    box-shadow: 0 4px 15px rgba(59, 165, 92, 0.4);
+}
+
+.primary-btn:hover, #replay-btn:hover {
+    background-color: #2d8a4a;
+}
+
+.primary-btn:disabled {
+    background-color: #a3a6aa;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.answer-btn {
+    background-color: #5865F2;
+    box-shadow: 0 4px 10px rgba(88, 101, 242, 0.3);
+    margin-bottom: 15px !important; 
+    border: 2px solid transparent; 
+    position: relative; 
+}
+
+.answer-btn:hover {
+    background-color: #4752c4;
+}
+ /* When clicked, js disables all buttons. Make them white with no shadow */
+.answer-btn:disabled {
+    background-color: white;
+    box-shadow: none;
+    color: #333; /* Switch text to dark grey so it's readable on the white background */
+    border-color: #ebedef; 
+    cursor: not-allowed;
+    opacity: 1; 
+
+/* Style the correct answer with a green border */
+.answer-btn.correct {
+    background-color: white !important; 
+    box-shadow: none !important;
+    border-color: #3ba55c !important; 
+    color: #333 !important;
+}
+
+/* Style the clicked wrong answer with a red border */
+.answer-btn.wrong {
+    background-color: white !important; 
+    box-shadow: none !important;
+    border-color: #ed4245 !important; 
+    color: #333 !important;
+}
+
+.answer-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.9;
+}
+
+.answer-btn:disabled:hover {
+    transform: none;
+}
+
+#next-btn {
+    margin-top: 0;
+}
+
+#next-question-divider {
+    margin: 30px auto;
+    color: lightgrey;
+}
+
+.quit-link {
+    background-color: transparent;
+    box-shadow: none;
+    color: #72767d; 
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 15px;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+
+.quit-link:hover {
+    background-color: transparent;
+    color: #ed4245; 
+    text-shadow: 0 0 8px rgba(237, 66, 69, 0.4); 
+    text-decoration: underline;
+}
+
+.quit-link:active {
+    transform: none;
+}
+
+.answer-btn.correct::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233ba55c' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.answer-btn.wrong::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ed4245' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.answer-btn.correct {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.answer-btn.wrong {
+    padding-left: 50px;
+    padding-right: 50px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body> 
+    <div class="main-container">
+        <div id="welcome-screen">
+            <h1>Trivia Challenge</h1>
+            <p class="subtitle">Please select a category and difficulty level.</p>
+            <p class="description">You will be asked a series of multiple choice questions.<br>Try to get as many right as possible!</p>
+
+            <div class="input-group">
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="17">Science & Nature</option>
+                    <option value="23">History</option>
+                    <option value="11">Entertainment: Film</option>
+                    <option value="9">General Knowledge</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="difficulty">Difficulty</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+
+            <button id="start-btn" class="primary-btn">Start Game</button>
+        </div>
+        
+        <div id="game-screen" style="display: none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
