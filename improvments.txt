@@ -1,1 +1,0 @@
-if question chosen was incorrect or correct and was too long. size of the text should be chnaged.
